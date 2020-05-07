@@ -1,4 +1,5 @@
-const router = require('express').Router()
+const express = require('express')
+const router = express.Router()
 
 let User = require ('../models/user.model')
 
@@ -15,17 +16,15 @@ router.get('/', function(req,res) {
 })
 
 //Adding new player
-router.post('/add',function (req,res){
+router.post('/add' , function (req,res){
 
     const username = req.body.username
-    
-    if(username != null){
-        const user = new User({
+        
+    const user = new User({
             username          
-        })
-    }
-
-    user.save.then(function(){
+    })
+    
+    user.save().then(function(){
         res.send(user)
     })
     .catch (function(e) {

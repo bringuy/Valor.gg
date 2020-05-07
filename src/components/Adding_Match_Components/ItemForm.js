@@ -11,7 +11,9 @@ class ItemForm extends React.Component {
         this.state = {
             win: '',
             team_score: '',
-            kda: '',
+            kill: '',
+            death: '',
+            assist: '',
             score: '',
             map: '',
             agent: '',
@@ -30,7 +32,9 @@ class ItemForm extends React.Component {
         const match = {
             win: this.state.win,
             team_score: this.state.team_score,
-            kda: this.state.kda,
+            kill: this.state.kill,
+            death: this.state.death,
+            assist: this.state.assist,
             score: this.state.score,
             map: this.state.map,
             agent: this.state.agent,
@@ -38,9 +42,9 @@ class ItemForm extends React.Component {
             user: 'hydrobox' /* Change later */
         }
 
-        axios.post('http://localhost:3000/match/add',match)
-        .then(res => console.log(res.data))
-        .catch(err => console.log('Adding Match: ', err))    
+        axios.post('http://localhost:3000/match/add' , match)
+        .then(res => alert(res.data))
+        .catch(err => alert(err));
 
         this.setState({
             win: '',

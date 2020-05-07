@@ -33,7 +33,7 @@ class Login extends React.Component{
             username : this.state.username
         }
         
-        axios.get ( 'http://localhost:3000/users/',user)
+        axios.post ( 'http://localhost:3000/user/add', user)
             .then(function(res){ 
                 console.log(res.data)
                 })

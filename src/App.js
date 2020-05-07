@@ -4,6 +4,7 @@ import AddingItem from './components/AddingItem'
 import Dashboard from './components/Dashboard'
 import Home from './components/Home'
 import Login from './components/Login'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 

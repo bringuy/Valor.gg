@@ -16,22 +16,46 @@ function ItemFormComponent (props){
                 {/* Drop down for win/loss? */}
                     <div className = 'col'>
                         <Form.Control 
-                            as='input' 
-                            type= 'text' 
-                            name = 'win'   
-                            placeholder="Win/Loss?" 
-                            onChange = {props.onChange} 
-                            value = {props.data.win}/>
-                    </div>
+                        as = "select" 
+                        name = "win"
+                        onChange = {props.onChange}
+                        value = {props.data.win}>
+                            <option>Win/Loss?</option>
+                            <option>WIN</option>
+                            <option>LOSS</option>
+                        </Form.Control>
+                        </div>
                     <div className = 'col'>
                         <Form.Control 
                             as = 'input' 
-                            type='text' 
-                            name = 'kda' 
-                            value = {props.data.kda}
+                            type = 'number' 
+                            name = 'kill' 
+                            value = {props.data.kill}
                             onChange = {props.onChange}
-                            placeholder="KDA?" 
+                            placeholder="Kills?" 
                             />
+                    </div>
+                    <div style={{'font-size': "27px"}}>/</div>
+                    <div className = 'col'>
+                        <Form.Control 
+                            as = 'input' 
+                            type = 'number' 
+                            name = 'death' 
+                            value = {props.data.death}
+                            onChange = {props.onChange}
+                            placeholder = "Deaths?" 
+                        />
+                    </div>
+                    <div style={{'font-size': "27px"}}>/</div>
+                    <div className = 'col'>
+                        <Form.Control 
+                            as = 'input' 
+                            type = 'number' 
+                            name = 'assist' 
+                            value = {props.data.assist}
+                            onChange = {props.onChange}
+                            placeholder="Assists?" 
+                        />
                     </div>
                 </Form.Row>
                 

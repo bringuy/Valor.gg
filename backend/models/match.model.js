@@ -18,11 +18,19 @@ const MatchSchema = new Schema({
         enum : WIN 
         },
     team_score : {
-        type: String,
+        type: String, 
         required : true,
     },
-    kda : {
-        type: String,
+    kill : {
+        type: Number,
+        required: true
+    },
+    death: {
+        type: Number,
+        required: true
+    },
+    assist: {
+        type: Number,
         required: true
     },
     score: {
